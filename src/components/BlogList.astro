@@ -1,0 +1,21 @@
+---
+import BlogDetails from "./BlogDetails.astro";
+
+const {className, thumbnail} = Astro.props;
+---
+
+<div class={`flex ${className} gap-5`}>
+    {thumbnail && <div class="flex-none">
+        <img src={thumbnail ?? `https://placehold.co/50x50`} alt="Random image" />
+    </div>}
+    <div class="flex-grow">
+        <BlogDetails>
+            <slot name="category" slot="category" />
+            <slot name="title" slot="title" />
+            <slot name="description" slot="description" />
+            <slot name="image" slot="image" />
+            <slot name="author" slot="author" />
+            <slot name="date" slot="date" />
+        </BlogDetails>
+    </div>
+</div>

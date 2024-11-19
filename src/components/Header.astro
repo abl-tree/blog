@@ -1,0 +1,48 @@
+---
+import Navbar from './Navbar.jsx'
+---
+
+<header id="header" class="sticky top-0 left-0 w-full transition-transform duration-300 z-50">
+    <Navbar client:load />
+</header>
+
+<style>
+    #header {
+        will-change: transform;
+    }
+</style>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+      const header = document.getElementById("header");
+      const popularElements = document.getElementsByClassName("sticky-with-header");
+      const headerHeight = header.offsetHeight; // Get the header height
+      let lastScrollY = window.scrollY;
+      let headerVisible = false;
+  
+      window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+  
+        if (currentScrollY > lastScrollY) {
+          // Scrolling Down
+          header.classList.add("-translate-y-full");
+          headerVisible = false;
+        } else {
+          // Scrolling Up
+          header.classList.remove("-translate-y-full");
+          headerVisible = true;
+        }
+
+        // Adjust `top` for all elements with the "sticky-with-header" class
+        Array.from(popularElements).forEach((element) => {
+            if (headerVisible) {
+                element.style.top = `${headerHeight}px`; // Adjust based on header height
+            } else {
+                element.style.top = "0px"; // Reset when header is hidden
+            }
+        });
+  
+        lastScrollY = currentScrollY;
+      });
+    });
+</script>

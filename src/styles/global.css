@@ -1,0 +1,4 @@
+.custom-space-y-1 > :not(:first-child) {
+  padding-top: 1rem; /* Default padding */
+  margin-top: 1rem; /* Default padding */
+}

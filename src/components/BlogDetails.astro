@@ -1,0 +1,14 @@
+---
+import AuthorDate from './AuthorDate.astro'
+---
+
+<div class="flex flex-col">
+    <slot name="category" />
+    <slot name="title" />
+    <slot name="description" />
+    <AuthorDate>
+        <slot slot="image" name="image" />
+        <slot slot="author" name="author" />
+        <slot slot="date" name="date" />
+    </AuthorDate>
+</div>

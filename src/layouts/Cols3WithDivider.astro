@@ -1,0 +1,15 @@
+---
+const {className} = Astro.props;
+---
+
+<div class={`grid grid-cols-1 lg:grid-cols-4 lg:divide-x lg:divide-gray-300 gap-5 lg:gap-0 ${className} pb-5`}>
+    <div class="lg:px-5 order-3 lg:order-1">
+        <slot name="col-1" />
+    </div>
+    <div class="lg:col-start-2 lg:col-span-2 lg:px-5 order-1 lg:order-2">
+        <slot name="col-2" />
+    </div>
+    <div class="lg:px-5 order-2 lg:order-3">
+        <slot name="col-3" />
+    </div>
+</div>

@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogList from "../../components/BlogList.astro";
+import Trending from "../../components/Trending.astro";
+import Popular from "../../components/Popular.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+---
+
+<Layout>
+    <Breadcrumbs />
+    <div class="grid grid-cols-5">
+        <div class="col-span-4">
+            <BlogList>
+                <h1 slot="title">This is blog title</h1>
+                <span slot="category">Category</span>
+                <p slot="description">In the Age of Information, news media faces both unprecedented opportunities and significant challenges.</p>
+                <img
+                    slot="image"
+                    alt="Jane Doe's profile picture" 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                    class="size-8 rounded-full" />
+                <Fragment slot="author">
+                    <span>Author name</span>
+                </Fragment>
+                <Fragment slot="date">
+                    Jan 1, 2024
+                </Fragment>
+            </BlogList>
+            
+            <div class="blog-content mx-52 my-16">
+                <img src="https://placehold.co/1200x600" alt="Random image" />
+
+                In today’s interconnected world, the realms of economics, politics, news, and the globalized society are deeply intertwined, shaping our societies and influencing decision-making at various levels. This visually captivating blog post delves into the complex interactions between these domains, highlighting their significance and exploring the ways in which they impact our lives.
+
+                The interplay between economics and politics forms a complex and intricate web that shapes the world we live in. The Economics-Politics Nexus refers to the symbiotic relationship between economic policies and political decisions, highlighting the interdependence of these two vital aspects of society. Political choices influence economic strategies, while economic conditions often dictate political agendas. This intricate relationship is evident in various spheres, such as trade policies, taxation, and welfare programs, where political ideologies and decisions directly impact economic outcomes.
+
+                News Media in the Age of Information
+                In the Age of Information, news media faces both unprecedented opportunities and significant challenges. The widespread availability of digital platforms has democratized information dissemination, allowing news to reach a global audience almost instantly. This immediacy can foster greater transparency and awareness, but it also raises critical concerns about the accuracy and reliability of news. The rapid spread of misinformation and the proliferation of ‘fake news’ pose significant threats to informed public discourse.
+                
+                In today’s interconnected world, the realms of economics, politics, news, and the globalized society are deeply intertwined, shaping our societies and influencing decision-making at various levels. This visually captivating blog post delves into the complex interactions between these domains, highlighting their significance and exploring the ways in which they impact our lives.
+
+                The interplay between economics and politics forms a complex and intricate web that shapes the world we live in. The Economics-Politics Nexus refers to the symbiotic relationship between economic policies and political decisions, highlighting the interdependence of these two vital aspects of society. Political choices influence economic strategies, while economic conditions often dictate political agendas. This intricate relationship is evident in various spheres, such as trade policies, taxation, and welfare programs, where political ideologies and decisions directly impact economic outcomes.
+
+                News Media in the Age of Information
+                In the Age of Information, news media faces both unprecedented opportunities and significant challenges. The widespread availability of digital platforms has democratized information dissemination, allowing news to reach a global audience almost instantly. This immediacy can foster greater transparency and awareness, but it also raises critical concerns about the accuracy and reliability of news. The rapid spread of misinformation and the proliferation of ‘fake news’ pose significant threats to informed public discourse.
+                
+                In today’s interconnected world, the realms of economics, politics, news, and the globalized society are deeply intertwined, shaping our societies and influencing decision-making at various levels. This visually captivating blog post delves into the complex interactions between these domains, highlighting their significance and exploring the ways in which they impact our lives.
+
+                The interplay between economics and politics forms a complex and intricate web that shapes the world we live in. The Economics-Politics Nexus refers to the symbiotic relationship between economic policies and political decisions, highlighting the interdependence of these two vital aspects of society. Political choices influence economic strategies, while economic conditions often dictate political agendas. This intricate relationship is evident in various spheres, such as trade policies, taxation, and welfare programs, where political ideologies and decisions directly impact economic outcomes.
+
+                News Media in the Age of Information
+                In the Age of Information, news media faces both unprecedented opportunities and significant challenges. The widespread availability of digital platforms has democratized information dissemination, allowing news to reach a global audience almost instantly. This immediacy can foster greater transparency and awareness, but it also raises critical concerns about the accuracy and reliability of news. The rapid spread of misinformation and the proliferation of ‘fake news’ pose significant threats to informed public discourse.
+                
+                In today’s interconnected world, the realms of economics, politics, news, and the globalized society are deeply intertwined, shaping our societies and influencing decision-making at various levels. This visually captivating blog post delves into the complex interactions between these domains, highlighting their significance and exploring the ways in which they impact our lives.
+
+                The interplay between economics and politics forms a complex and intricate web that shapes the world we live in. The Economics-Politics Nexus refers to the symbiotic relationship between economic policies and political decisions, highlighting the interdependence of these two vital aspects of society. Political choices influence economic strategies, while economic conditions often dictate political agendas. This intricate relationship is evident in various spheres, such as trade policies, taxation, and welfare programs, where political ideologies and decisions directly impact economic outcomes.
+
+                News Media in the Age of Information
+                In the Age of Information, news media faces both unprecedented opportunities and significant challenges. The widespread availability of digital platforms has democratized information dissemination, allowing news to reach a global audience almost instantly. This immediacy can foster greater transparency and awareness, but it also raises critical concerns about the accuracy and reliability of news. The rapid spread of misinformation and the proliferation of ‘fake news’ pose significant threats to informed public discourse.
+            </div>
+        </div>
+        <div class="col-span-1">
+            <Trending className="my-5" gridClassName="!grid-cols-1"/>
+            <Popular className="sticky sticky-with-header top-0 my-5 py-5 transition-all duration-300" gridClassName="!grid-cols-1"/>
+        </div>
+    </div>
+</Layout>
